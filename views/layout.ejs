@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>
+    <%= title || "CDSM - Votre partenaire numérique" %>
+  </title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="CDSM accompagne les entreprises dans leur transformation numérique avec des solutions digitales, de l'automatisation et de l'intelligence artificielle."
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="/css/styles.css?v=4"
+  />
+
+  <!-- JS -->
+  <script
+    src="/js/main.js"
+    defer
+  ></script>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+
+      <!-- LOGO -->
+
+      <a
+        href="/"
+        class="site-logo"
+        aria-label="Accueil CDSM"
+      >
+
+        <img
+          src="/images/logo-cdsm.png"
+          alt="CDSM"
+          class="logo-img"
+        />
+
+      </a>
+
+
+      <!-- MENU MOBILE -->
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="mainNav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+
+      <!-- =====================================
+           NAVIGATION
+      ====================================== -->
+
+      <nav class="main-nav" id="mainNav">
+
+  <a
+    href="/"
+    class="<%= currentPath === '/' ? 'active' : '' %>"
+  >
+    Accueil
+  </a>
+
+  <a
+    href="/solutions"
+    class="<%= currentPath === '/solutions' ? 'active' : '' %>"
+  >
+    Nos solutions
+  </a>
+
+  <a href="/#approche">
+    Notre approche
+  </a>
+
+  <a
+    href="/qui-sommes-nous"
+    class="<%= currentPath === '/qui-sommes-nous' ? 'active' : '' %>"
+  >
+    Qui sommes-nous ?
+  </a>
+
+  <a
+    href="/revendeurs"
+    class="<%= currentPath === '/revendeurs' ? 'active' : '' %>"
+  >
+    Trouver un revendeur
+  </a>
+
+  <a
+    href="/contact"
+    class="<%= currentPath === '/contact' ? 'active' : '' %>"
+  >
+    Contact
+  </a>
+
+</nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================
+       CONTENU DE LA PAGE
+  ========================================== -->
+
+  <main class="site-main">
+
+    <%- body %>
+
+  </main>
+
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+
+    <div class="container footer-grid">
+
+
+      <!-- =====================================
+           COLONNE 1 : CDSM
+      ====================================== -->
+
+      <div class="footer-company">
+
+        <a
+          href="/"
+          class="footer-logo-link"
+          aria-label="Accueil CDSM"
+        >
+
+          <img
+            src="/images/logo-cdsm.png"
+            alt="CDSM"
+            class="footer-logo-img"
+          />
+
+        </a>
+
+
+        <p>
+          Votre partenaire numérique.
+        </p>
+
+
+        <p>
+          Des solutions digitales pensées pour accompagner
+          les entreprises dans leur transformation numérique.
+        </p>
+
+      </div>
+
+
+
+      <!-- =====================================
+           COLONNE 2 : CDSM
+      ====================================== -->
+
+      <div>
+
+        <h3>
+          CDSM
+        </h3>
+
+
+        <p>
+          <a href="/">
+            Accueil
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/#solutions">
+            Nos solutions
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/#approche">
+            Notre approche
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/qui-sommes-nous">
+            Qui sommes-nous ?
+          </a>
+        </p>
+
+      </div>
+
+
+
+      <!-- =====================================
+           COLONNE 3 : SOLUTIONS
+      ====================================== -->
+
+      <div>
+
+        <h3>
+          Solutions
+        </h3>
+
+
+        <p>
+          <a href="/produits">
+            Produits
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/revendeurs">
+            Trouver un revendeur
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/contact">
+            Contact
+          </a>
+        </p>
+
+      </div>
+
+
+
+      <!-- =====================================
+           COLONNE 4 : INFORMATIONS
+      ====================================== -->
+
+      <div>
+
+        <h3>
+          Informations
+        </h3>
+
+
+        <p>
+          <a href="/mentions-legales">
+            Mentions légales
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/confidentialite">
+            Politique de confidentialité
+          </a>
+        </p>
+
+
+        <p>
+          <a href="/cgu">
+            Conditions générales d'utilisation
+          </a>
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         BAS DU FOOTER
+    ====================================== -->
+
+    <div class="footer-bottom">
+
+      <div class="container footer-bottom-inner">
+
+        <p>
+          © <%= new Date().getFullYear() %>
+          CDSM — Tous droits réservés.
+        </p>
+
+
+        <p>
+          Solutions digitales · Intelligence artificielle · Développement
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>

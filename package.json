@@ -1,0 +1,23 @@
+{
+  "name": "sma-site",
+  "version": "1.0.0",
+  "description": "Reprise du site SMA en Node.js / Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.0",
+    "express-ejs-layouts": "^2.5.1",
+    "nodemailer": "^9.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
