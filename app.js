@@ -51,12 +51,7 @@ app.get("/qui-sommes-nous", (req, res) => {
     currentPath: "/qui-sommes-nous"
   });
 });
-app.get("/revendeurs", (req, res) => {
-  res.render("revendeurs", {
-    title: "Trouver un revendeur - CDSM",
-    currentPath: "/revendeurs"
-  });
-});
+
 app.get("/contact", (req, res) => {
   res.render("contact", {
     title: "Contact - CDSM",
