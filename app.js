@@ -139,6 +139,9 @@ app.get("/solutions", (req, res) => {
     currentPath: "/solutions"
   });
 });
+app.get("/revendeurs", (req, res) => {
+  res.redirect(301, "/solutions");
+});
 
 // ==========================================
 // SERVEUR LOCAL
