@@ -1,8 +1,10 @@
 const express = require("express");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
-require("dotenv").config({ path: ".env.local" });
 const nodemailer = require("nodemailer");
+
+require("dotenv").config({ path: ".env.local" });
+
 const app = express();
 
 // ==========================================
@@ -39,12 +41,16 @@ app.get("/", (req, res) => {
     currentPath: "/"
   });
 });
-app.get("/produits", (req, res) => {
-  res.render("produits", {
-    title: "Produits - CDSM",
-    currentPath: "/produits"
+
+// Nos solutions
+app.get("/solutions", (req, res) => {
+  res.render("solutions", {
+    title: "Nos solutions - CDSM",
+    currentPath: "/solutions"
   });
 });
+
+// Qui sommes-nous ?
 app.get("/qui-sommes-nous", (req, res) => {
   res.render("qui-sommes-nous", {
     title: "Qui sommes-nous ? - CDSM",
@@ -52,14 +58,25 @@ app.get("/qui-sommes-nous", (req, res) => {
   });
 });
 
+// Références
+app.get("/references", (req, res) => {
+  res.render("references", {
+    title: "Nos références - CDSM",
+    currentPath: "/references"
+  });
+});
+
+// Contact
 app.get("/contact", (req, res) => {
   res.render("contact", {
     title: "Contact - CDSM",
     currentPath: "/contact",
-    success: false
+    success: false,
+    error: false
   });
 });
 
+// Envoi formulaire contact
 app.post("/contact", async (req, res) => {
   try {
     const {
@@ -101,9 +118,9 @@ ${message}
     res.render("contact", {
       title: "Contact - CDSM",
       currentPath: "/contact",
-      success: true
+      success: true,
+      error: false
     });
-
   } catch (error) {
     console.error("Erreur envoi email :", error);
 
@@ -115,38 +132,44 @@ ${message}
     });
   }
 });
+
+// ==========================================
+// PAGES LÉGALES
+// ==========================================
+
 app.get("/mentions-legales", (req, res) => {
   res.render("mentions-legales", {
     title: "Mentions légales - CDSM",
     currentPath: "/mentions-legales"
   });
 });
+
 app.get("/confidentialite", (req, res) => {
   res.render("confidentialite", {
     title: "Politique de confidentialité - CDSM",
     currentPath: "/confidentialite"
   });
 });
+
 app.get("/cgu", (req, res) => {
   res.render("cgu", {
     title: "Conditions générales d'utilisation - CDSM",
     currentPath: "/cgu"
   });
 });
-app.get("/solutions", (req, res) => {
-  res.render("solutions", {
-    title: "Nos solutions - CDSM",
-    currentPath: "/solutions"
-  });
-});
-app.get("/revendeurs", (req, res) => {
+
+// ==========================================
+// ANCIENNES URLS
+// ==========================================
+
+// Ancienne page Produits
+app.get("/produits", (req, res) => {
   res.redirect(301, "/solutions");
 });
-app.get("/references", (req, res) => {
-  res.render("references", {
-    title: "Nos références - CDSM",
-    currentPath: "/references"
-  });
+
+// Ancienne page Revendeurs
+app.get("/revendeurs", (req, res) => {
+  res.redirect(301, "/solutions");
 });
 
 // ==========================================

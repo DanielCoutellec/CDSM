@@ -1,14 +1,19 @@
 {
-  "name": "sma-site",
+  "name": "cdsm-site",
   "version": "1.0.0",
-  "description": "Reprise du site SMA en Node.js / Express",
+  "description": "Site corporate CDSM - Node.js / Express / EJS",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cdsm",
+    "nodejs",
+    "express",
+    "ejs"
+  ],
+  "author": "CDSM",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^17.4.2",
