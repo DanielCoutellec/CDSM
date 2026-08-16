@@ -142,6 +142,12 @@ app.get("/solutions", (req, res) => {
 app.get("/revendeurs", (req, res) => {
   res.redirect(301, "/solutions");
 });
+app.get("/references", (req, res) => {
+  res.render("references", {
+    title: "Nos références - CDSM",
+    currentPath: "/references"
+  });
+});
 
 // ==========================================
 // SERVEUR LOCAL

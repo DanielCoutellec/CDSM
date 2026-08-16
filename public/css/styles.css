@@ -1509,7 +1509,80 @@ img {
     grid-template-columns: 1fr;
   }
 }.form-error {
-  margin-bottom: 25px;
+  mar/* =========================================================
+   RÉFÉRENCES
+   ========================================================= */
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.reference-card {
+  min-height: 150px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(15, 45, 85, 0.07);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b7d6ee;
+
+  box-shadow:
+    0 20px 45px rgba(15, 45, 85, 0.12);
+}
+
+.reference-card h3 {
+  margin: 0 0 7px;
+
+  color: #102e55;
+
+  font-size: 21px;
+}
+
+.reference-card p {
+  margin: 0;
+
+  color: #647184;
+
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+  .references-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+
+}gin-bottom: 25px;
   padding: 15px 18px;
 
   color: #991b1b;
@@ -1518,4 +1591,196 @@ img {
   border-radius: 10px;
 
   font-weight: 700;
+}/* =========================================================
+   RÉFÉRENCES
+   ========================================================= */
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.reference-card {
+  min-height: 150px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(15, 45, 85, 0.07);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b7d6ee;
+
+  box-shadow:
+    0 20px 45px rgba(15, 45, 85, 0.12);
+}
+
+.reference-card h3 {
+  margin: 0 0 7px;
+
+  color: #102e55;
+
+  font-size: 21px;
+}
+
+.reference-card p {
+  margin: 0;
+
+  color: #647184;
+
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+  .references-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+
+}/* =========================================================
+   RÉFÉRENCES
+   ========================================================= */
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.reference-card {
+  min-height: 245px;
+  padding: 28px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+  text-decoration: none;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(15, 45, 85, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #b7d6ee;
+
+  box-shadow:
+    0 20px 45px rgba(15, 45, 85, 0.12);
+}
+
+
+/* ZONE LOGO */
+
+.reference-logo-wrap {
+  width: 100%;
+  height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  padding: 5px;
+}
+
+.reference-logo {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 190px;
+  max-height: 90px;
+
+  object-fit: contain;
+}
+
+
+/* TEXTES */
+
+.reference-card h3 {
+  margin: 0 0 7px;
+
+  color: #102e55;
+
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.reference-card p {
+  margin: 0;
+
+  color: #647184;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* TABLETTE */
+
+@media (max-width: 900px) {
+
+  .references-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-card {
+    min-height: 220px;
+  }
+
 }
