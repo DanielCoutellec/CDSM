@@ -10,12 +10,12 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <title><%= title %></title>
+
   <meta
     name="description"
-    content="CDSM accompagne les entreprises dans leur transformation numérique avec des solutions digitales simples, performantes et adaptées à leurs usages."
+    content="CDSM accompagne les entreprises dans leur transformation numérique avec des solutions simples, performantes et adaptées à leurs usages."
   >
-
-  <title><%= title || "CDSM - Solutions digitales pour les entreprises" %></title>
 
   <link
     rel="stylesheet"
@@ -27,240 +27,233 @@
 
 <body>
 
+  <!-- =========================================
+       HEADER
+  ========================================== -->
 
-<!-- =========================================
-     HEADER
-========================================== -->
+  <header class="site-header">
 
-<header class="site-header">
+    <div class="container header-inner">
 
-  <div class="container header-inner">
-
-
-    <!-- LOGO -->
-
-    <a
-      href="/"
-      class="logo"
-      aria-label="CDSM - Accueil"
-    >
-
-      <img
-        src="/images/logo-cdsm.png"
-        alt="CDSM"
-      >
-
-    </a>
-
-
-    <!-- BOUTON MOBILE -->
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Ouvrir le menu"
-      aria-expanded="false"
-      aria-controls="mainNav"
-    >
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-
-    <!-- NAVIGATION -->
-
-    <nav
-      class="main-nav"
-      id="mainNav"
-    >
+      <!-- LOGO -->
 
       <a
         href="/"
-        class="<%= currentPath === '/' ? 'active' : '' %>"
+        class="logo"
+        aria-label="CDSM - Accueil"
       >
-        Accueil
+        <img
+          src="/images/logo-cdsm.png"
+          alt="CDSM"
+        >
       </a>
 
 
-      <a
-        href="/solutions"
-        class="<%= currentPath === '/solutions' ? 'active' : '' %>"
+      <!-- MENU MOBILE -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
       >
-        Nos solutions
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
 
-      <a href="/#approche">
-        Notre approche
-      </a>
+      <!-- NAVIGATION -->
 
-
-      <a
-        href="/qui-sommes-nous"
-        class="<%= currentPath === '/qui-sommes-nous' ? 'active' : '' %>"
+      <nav
+        class="main-nav"
+        id="mainNav"
       >
-        Qui sommes-nous ?
-      </a>
+
+        <a
+          href="/"
+          class="<%= currentPath === '/' ? 'active' : '' %>"
+        >
+          Accueil
+        </a>
+
+        <a
+          href="/qui-sommes-nous"
+          class="<%= currentPath === '/qui-sommes-nous' ? 'active' : '' %>"
+        >
+          Qui sommes-nous ?
+        </a>
+
+        <a href="/#approche">
+          Notre approche
+        </a>
+
+        <a
+          href="/solutions"
+          class="<%= currentPath === '/solutions' ? 'active' : '' %>"
+        >
+          Nos solutions
+        </a>
+
+        <a
+          href="/references"
+          class="<%= currentPath === '/references' ? 'active' : '' %>"
+        >
+          Références
+        </a>
+
+        <a
+          href="/contact"
+          class="<%= currentPath === '/contact' ? 'active' : '' %>"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
 
 
-      <a
-        href="/references"
-        class="<%= currentPath === '/references' ? 'active' : '' %>"
-      >
-        Références
-      </a>
+  <!-- =========================================
+       CONTENU
+  ========================================== -->
+
+  <main>
+
+    <%- body %>
+
+  </main>
 
 
-      <a
-        href="/contact"
-        class="<%= currentPath === '/contact' ? 'active' : '' %>"
-      >
-        Contact
-      </a>
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
 
-    </nav>
+  <footer class="site-footer">
 
-  </div>
-
-</header>
+    <div class="container footer-grid">
 
 
-<!-- =========================================
-     CONTENU
-========================================== -->
+      <!-- CDSM -->
 
-<main>
+      <div class="footer-brand">
 
-  <%- body %>
+        <div class="footer-brand-name">
 
-</main>
+          <span class="footer-diamond"></span>
+
+          <strong>
+            CDSM
+          </strong>
+
+        </div>
+
+        <p>
+          Solutions digitales pour les entreprises.
+        </p>
+
+        <p>
+          CDSM accompagne les organisations dans leur
+          transformation numérique avec des solutions
+          simples, performantes et adaptées à leurs usages.
+        </p>
+
+      </div>
 
 
-<!-- =========================================
-     FOOTER
-========================================== -->
+      <!-- NAVIGATION -->
 
-<footer class="site-footer">
+      <div class="footer-column">
 
-  <div class="container footer-grid">
+        <h3>
+          Navigation
+        </h3>
+
+        <a href="/">
+          Accueil
+        </a>
+
+        <a href="/qui-sommes-nous">
+          Qui sommes-nous ?
+        </a>
+
+        <a href="/#approche">
+          Notre approche
+        </a>
+
+        <a href="/solutions">
+          Nos solutions
+        </a>
+
+        <a href="/references">
+          Références
+        </a>
+
+        <a href="/contact">
+          Contact
+        </a>
+
+      </div>
 
 
-    <!-- CDSM -->
+      <!-- INFORMATIONS -->
 
-    <div class="footer-brand">
+      <div class="footer-column">
 
-      <div class="footer-brand-name">
-  <span class="footer-diamond"></span>
-  <strong>CDSM</strong>
-</div>
+        <h3>
+          Informations
+        </h3>
+
+        <a href="/mentions-legales">
+          Mentions légales
+        </a>
+
+        <a href="/confidentialite">
+          Politique de confidentialité
+        </a>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-column">
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="/contact">
+          Nous contacter
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="container footer-bottom">
 
       <p>
-        Solutions digitales pour les entreprises.
-      </p>
-
-      <p>
-        CDSM accompagne les organisations dans leur
-        transformation numérique avec des solutions
-        simples, performantes et adaptées à leurs usages.
+        © <%= new Date().getFullYear() %> CDSM. Tous droits réservés.
       </p>
 
     </div>
 
-
-    <!-- NAVIGATION -->
-
-    <div class="footer-column">
-
-      <h3>
-        Navigation
-      </h3>
-
-      <a href="/">
-        Accueil
-      </a>
-
-      <a href="/solutions">
-        Nos solutions
-      </a>
-
-      <a href="/#approche">
-        Notre approche
-      </a>
-
-      <a href="/qui-sommes-nous">
-        Qui sommes-nous ?
-      </a>
-
-      <a href="/references">
-        Références
-      </a>
-
-      <a href="/contact">
-        Contact
-      </a>
-
-    </div>
+  </footer>
 
 
-    <!-- INFORMATIONS -->
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
 
-    <div class="footer-column">
-
-      <h3>
-        Informations
-      </h3>
-
-      <a href="/mentions-legales">
-        Mentions légales
-      </a>
-
-      <a href="/confidentialite">
-        Politique de confidentialité
-      </a>
-
-    </div>
-
-
-    <!-- CONTACT -->
-
-    <div class="footer-column">
-
-      <h3>
-        Contact
-      </h3>
-
-      <a href="/contact">
-        Nous contacter
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- BAS DE FOOTER -->
-
-  <div class="container footer-bottom">
-
-    <p>
-      © <%= new Date().getFullYear() %> CDSM. Tous droits réservés.
-    </p>
-
-  </div>
-
-</footer>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================== -->
-
-<script src="/js/main.js"></script>
-
+  <script src="/js/main.js"></script>
 
 </body>
 
