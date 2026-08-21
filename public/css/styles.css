@@ -1644,3 +1644,244 @@ select {
   }
 
 }
+/* =========================================================
+   REFERENCES - VERSION FINALE COMPACTE
+   ========================================================= */
+
+.references-background {
+  padding: 28px 0 18px;
+  background-position: center;
+  background-size: cover;
+}
+
+.references-background .container {
+  max-width: 1320px;
+}
+
+/* Titre */
+
+.references-background .section-heading {
+  margin-bottom: 16px;
+}
+
+.references-background .section-heading h2 {
+  margin-bottom: 6px;
+}
+
+.references-background .section-intro {
+  margin-bottom: 0;
+}
+
+
+/* GRILLE */
+
+.references-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 16px;
+}
+
+
+/* CARTES */
+
+.references-grid .reference-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 0;
+  height: 185px;
+
+  padding: 18px 14px;
+
+  text-align: center;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(220, 230, 240, 0.9);
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(5, 35, 70, 0.08);
+}
+
+
+/* LOGOS */
+
+.references-grid .reference-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 65px;
+  min-height: 65px;
+
+  margin: 0 0 8px;
+}
+
+.references-grid .reference-logo {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 150px;
+  max-height: 55px;
+
+  object-fit: contain;
+}
+
+
+/* TITRES */
+
+.references-grid .reference-card h3 {
+  margin: 2px 0 6px;
+
+  color: #082f5b;
+
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+
+/* CATÉGORIE */
+
+.references-grid .reference-card p {
+  margin: 0 0 7px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+
+/* LIEN */
+
+.references-grid .reference-link {
+  margin-top: auto;
+
+  color: #0798e8;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* SURVOL */
+
+.references-grid .reference-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 14px 30px rgba(5, 35, 70, 0.14);
+}
+
+
+/* =========================================================
+   CTA JUSTE SOUS LES REFERENCES
+   ========================================================= */
+
+.references-background + .contact-cta {
+  margin-top: 0;
+}
+
+.contact-cta {
+  padding: 28px 0 32px;
+}
+
+.contact-cta .contact-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.contact-cta .contact-cta-text {
+  flex: 1;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+}
+
+.contact-cta .section-eyebrow {
+  margin-bottom: 8px;
+}
+
+.contact-cta h2 {
+  margin: 0 0 8px;
+
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.contact-cta .contact-cta-text > p:last-child {
+  margin: 0;
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .references-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   PETITE TABLETTE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .references-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .references-background {
+    padding: 30px 0 20px;
+  }
+
+  .references-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .references-grid .reference-card {
+    height: auto;
+    min-height: 175px;
+  }
+
+  .contact-cta {
+    padding: 35px 0;
+  }
+
+  .contact-cta .contact-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+}
