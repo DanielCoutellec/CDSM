@@ -1546,4 +1546,101 @@ select {
 /* Réduire la marge du bloc Redyce */
 .solution-main-card {
   margin-top: 10px;
+}/* =========================================================
+   CTA CONTACT - CORRECTION
+   ========================================================= */
+
+.contact-cta {
+  padding: 65px 0;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    #062d59 0%,
+    #0878bc 100%
+  );
+}
+
+.contact-cta .contact-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+/* Annule tout style de carte hérité */
+.contact-cta .contact-cta-text,
+.contact-cta .contact-cta-action {
+  width: auto;
+  height: auto;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.contact-cta .contact-cta-text {
+  flex: 1;
+}
+
+.contact-cta .section-eyebrow {
+  margin: 0 0 10px;
+
+  color: #55c7ff;
+}
+
+.contact-cta h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 4vw, 46px);
+}
+
+.contact-cta .contact-cta-text > p:last-child {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 17px;
+}
+
+.contact-cta .contact-cta-action {
+  flex: 0 0 auto;
+}
+
+.contact-cta .btn-light {
+  min-width: 150px;
+
+  color: #082f5b;
+  background: #ffffff;
+
+  border: 1px solid #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .contact-cta {
+    padding: 50px 0;
+  }
+
+  .contact-cta .contact-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
 }
