@@ -1,60 +1,64 @@
 <!-- =========================================
-     HERO
+     HERO SLIDER
 ========================================== -->
 
-<section class="hero">
+<section class="hero hero-slider" id="hero">
 
-  <div class="container hero-grid">
+  <!-- Slides -->
+  <div class="hero-slides" aria-hidden="true">
 
-    <div class="hero-content">
+    <div
+      class="hero-slide active"
+      style="background-image: url('/images/hero/hero-1.jpg');"
+    ></div>
 
-      <p class="hero-kicker">
-        SOLUTIONS DIGITALES POUR LES ENTREPRISES
-      </p>
+    <div
+      class="hero-slide"
+      style="background-image: url('/images/hero/hero-2.jpg');"
+    ></div>
 
-      <h1>
-        Votre partenaire numérique
-      </h1>
+    <div
+      class="hero-slide"
+      style="background-image: url('/images/hero/hero-3.jpg');"
+    ></div>
 
-      <p class="hero-lead">
-        CDSM accompagne les entreprises dans leur transformation digitale
-        avec des solutions simples, performantes et adaptées à leurs usages.
-      </p>
+    <div
+      class="hero-slide"
+      style="background-image: url('/images/hero/hero-4.jpg');"
+    ></div>
 
-      <div class="hero-actions">
-
-        <a href="/#solutions" class="btn btn-primary">
-          Découvrir nos solutions
-        </a>
-
-        <a href="/contact" class="btn btn-outline">
-          Nous contacter
-        </a>
-
-      </div>
-
-    </div>
+  </div>
 
 
-    <div class="hero-visual">
+  <!-- Voile -->
+  <div class="hero-overlay"></div>
 
-      <div class="hero-card">
 
-        <p class="hero-card-label">
-          CDSM
-        </p>
+  <!-- Contenu -->
+  <div class="container hero-slider-content">
 
-        <h2>
-          Des outils numériques pensés pour votre activité
-        </h2>
+    <p class="hero-kicker">
+      SOLUTIONS DIGITALES POUR LES ENTREPRISES
+    </p>
 
-        <p>
-          Dématérialisation, gestion documentaire,
-          automatisation, intelligence artificielle
-          et outils collaboratifs.
-        </p>
+    <h1>
+      Votre partenaire numérique
+    </h1>
 
-      </div>
+    <p class="hero-lead">
+      CDSM accompagne les entreprises dans leur transformation digitale
+      avec des solutions simples, performantes et adaptées à leurs usages.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="/solutions" class="btn btn-primary">
+        Découvrir nos solutions
+      </a>
+
+      <a href="/contact" class="btn btn-outline">
+        Nous contacter
+      </a>
 
     </div>
 
@@ -223,25 +227,11 @@
 
       <ul>
 
-        <li>
-          Analyse des besoins
-        </li>
-
-        <li>
-          Conseil et choix des solutions
-        </li>
-
-        <li>
-          Déploiement
-        </li>
-
-        <li>
-          Formation des utilisateurs
-        </li>
-
-        <li>
-          Assistance et suivi
-        </li>
+        <li>Analyse des besoins</li>
+        <li>Conseil et choix des solutions</li>
+        <li>Déploiement</li>
+        <li>Formation des utilisateurs</li>
+        <li>Assistance et suivi</li>
 
       </ul>
 
