@@ -10,12 +10,200 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title><%= title %></title>
+
+  <!-- =========================================
+       SEO - TITRE
+  ========================================== -->
+
+  <title><%=
+    typeof title !== "undefined"
+      ? title
+      : "CDSM - Solutions digitales pour les entreprises"
+  %></title>
+
+
+  <!-- =========================================
+       SEO - DESCRIPTION
+  ========================================== -->
 
   <meta
     name="description"
-    content="CDSM accompagne les entreprises dans leur transformation numérique avec des solutions simples, performantes et adaptées à leurs usages."
+    content="<%=
+      typeof metaDescription !== 'undefined'
+        ? metaDescription
+        : 'CDSM accompagne les entreprises dans leur transformation numérique avec des solutions digitales, des sites web, des applications métier, de l’intelligence artificielle et un accompagnement commercial.'
+    %>"
   >
+
+
+  <!-- =========================================
+       SEO - ROBOTS
+  ========================================== -->
+
+  <meta
+    name="robots"
+    content="<%=
+      typeof robotsMeta !== 'undefined'
+        ? robotsMeta
+        : 'index, follow, max-image-preview:large'
+    %>"
+  >
+
+
+  <!-- =========================================
+       SEO - URL CANONIQUE
+  ========================================== -->
+
+  <link
+    rel="canonical"
+    href="<%=
+      typeof canonical !== 'undefined'
+        ? canonical
+        : 'https://cdsm.io' +
+          (
+            typeof currentPath !== 'undefined' && currentPath !== '/'
+              ? currentPath
+              : ''
+          )
+    %>"
+  >
+
+
+  <!-- =========================================
+       OPEN GRAPH
+       LinkedIn / Facebook / WhatsApp
+  ========================================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:locale"
+    content="fr_FR"
+  >
+
+  <meta
+    property="og:site_name"
+    content="CDSM"
+  >
+
+  <meta
+    property="og:title"
+    content="<%=
+      typeof title !== 'undefined'
+        ? title
+        : 'CDSM - Solutions digitales pour les entreprises'
+    %>"
+  >
+
+  <meta
+    property="og:description"
+    content="<%=
+      typeof metaDescription !== 'undefined'
+        ? metaDescription
+        : 'CDSM accompagne les entreprises dans leur transformation numérique avec des solutions digitales adaptées à leurs métiers.'
+    %>"
+  >
+
+  <meta
+    property="og:url"
+    content="<%=
+      typeof canonical !== 'undefined'
+        ? canonical
+        : 'https://cdsm.io' +
+          (
+            typeof currentPath !== 'undefined' && currentPath !== '/'
+              ? currentPath
+              : ''
+          )
+    %>"
+  >
+
+  <meta
+    property="og:image"
+    content="<%=
+      typeof ogImage !== 'undefined'
+        ? ogImage
+        : 'https://cdsm.io/images/hero/hero-1.jpg'
+    %>"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="CDSM - Solutions digitales pour les entreprises"
+  >
+
+
+  <!-- =========================================
+       TWITTER / X
+  ========================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="<%=
+      typeof title !== 'undefined'
+        ? title
+        : 'CDSM - Solutions digitales pour les entreprises'
+    %>"
+  >
+
+  <meta
+    name="twitter:description"
+    content="<%=
+      typeof metaDescription !== 'undefined'
+        ? metaDescription
+        : 'CDSM accompagne les entreprises dans leur transformation numérique avec des solutions digitales adaptées à leurs métiers.'
+    %>"
+  >
+
+  <meta
+    name="twitter:image"
+    content="<%=
+      typeof ogImage !== 'undefined'
+        ? ogImage
+        : 'https://cdsm.io/images/hero/hero-1.jpg'
+    %>"
+  >
+
+
+  <!-- =========================================
+       DONNÉES STRUCTURÉES SCHEMA.ORG
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://cdsm.io/#organization",
+    "name": "CDSM",
+    "url": "https://cdsm.io/",
+    "logo": "https://cdsm.io/images/logo-cdsm.png",
+    "description": "CDSM accompagne les entreprises dans leur transformation numérique avec des sites web, des applications métier, de l'intelligence artificielle et un accompagnement commercial."
+  }
+  </script>
+
+
+  <!-- =========================================
+       FAVICON
+  ========================================== -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/images/logo-cdsm.png"
+  >
+
+
+  <!-- =========================================
+       CSS
+  ========================================== -->
 
   <link
     rel="stylesheet"
